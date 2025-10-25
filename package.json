@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "@sergey/api-framework": "file:../../framework/api"
+    "@sergey/api-framework": "git+https://github.com/ausp1c1ousqw/api-framework.git"
   },
   "scripts": {
     "test": "cucumber-js"
