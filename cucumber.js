@@ -1,8 +1,13 @@
 export default {
-  default: [
-    "--require ./support/bootstrap.js",
-    "--require ./features/step_definitions/**/*.js",
-    "--publish-quiet",
-    "features/**/*.feature",
-  ].join(" "),
+  paths: ["features/**/*.feature"],
+  import: [
+    "./features/support/init.js",
+    "./features/support/**/*.js",
+    "./features/step-definitions/**/*.js",
+  ],
+  format: ["summary", "allure-cucumberjs/reporter"],
+  formatOptions: {
+    resultsDir: "./artifacts/allure-results",
+  },
+  publishQuiet: true,
 };
